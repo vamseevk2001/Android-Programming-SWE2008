@@ -13,7 +13,12 @@ public class Dashboard extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
         TextView msg = findViewById(R.id.msg);
-        String name = getIntent().getStringExtra("name");
-        msg.setText("Hello ! "+ name);
+        if(getIntent().hasExtra("name")){
+            String name = getIntent().getStringExtra("name");
+            msg.setText("Hello ! "+ name);
+        }
+        String login = getIntent().getStringExtra("login");
+        TextView loginMsg = findViewById(R.id.loginMsg);
+        loginMsg.setText(login);
     }
 }

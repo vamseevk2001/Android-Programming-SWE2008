@@ -13,7 +13,6 @@ public class UserAuthentication extends Service {
 
     @Override
     public IBinder onBind(Intent intent) {
-        // TODO: Return the communication channel to the service.
         throw new UnsupportedOperationException("Not yet implemented");
     }
 
@@ -30,14 +29,17 @@ public class UserAuthentication extends Service {
             // Password = vamseevk
 
             if(username.equals("vamseevk2001") && password.equals("vamseevk")){
-                Toast.makeText(getApplicationContext(), "Logged in successfully..", Toast.LENGTH_SHORT).show();
                 Intent next = new Intent(getApplicationContext(), Dashboard.class);
                 next.putExtra("name", username);
+                next.putExtra("login", "Login Successful  ✅ ");
                 next.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(next);
             }
             else {
-                Toast.makeText(getApplicationContext(), "Please check your credentials...", Toast.LENGTH_SHORT).show();
+                Intent next = new Intent(getApplicationContext(), Dashboard.class);
+                next.putExtra("login", "Login Failed ❌ ");
+                next.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(next);
             }
 
 
