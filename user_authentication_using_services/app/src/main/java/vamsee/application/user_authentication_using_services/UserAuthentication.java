@@ -31,7 +31,7 @@ public class UserAuthentication extends Service {
             if(username.equals("vamseevk2001") && password.equals("vamseevk")){
                 Intent next = new Intent(getApplicationContext(), Dashboard.class);
                 next.putExtra("name", username);
-                next.putExtra("login", "Login Successful  ✅ ");
+                next.putExtra("login", "Login Successful ✅ ");
                 next.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(next);
             }
