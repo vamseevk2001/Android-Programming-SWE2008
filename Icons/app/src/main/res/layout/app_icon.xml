@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="3dp"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="15dp"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/icon_item"
+        android:layout_width="60dp"
+        android:padding="4dp"
+        android:textAlignment="center"
+        android:src="@drawable/youtube"
+        android:layout_height="60dp"/>
+
+    <TextView
+        android:id="@+id/name_item"
+        android:text="Youtube"
+        android:layout_marginTop="4dp"
+        android:layout_width="match_parent"
+        android:textAlignment="center"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
