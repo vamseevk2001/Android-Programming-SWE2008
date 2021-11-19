@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="User Details">
+        <EditTextPreference android:title="name"
+            android:summary="Enter your name "
+            android:key="prefName"/>
+        <EditTextPreference android:title="phone no."
+            android:summary="Enter your phone "
+            android:key="prefPhone"/>
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="Product details">
+        <Preference android:title="item name"
+            android:summary="Sony play Station 5"
+            android:key="prefItemname"/>
+        <Preference android:title="item price"
+            android:summary="50,000 rs"
+            android:key="prefPrice"/>
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="Feedback">
+        <Preference android:title="Did you like the product?"
+            />
+            <CheckBoxPreference android:title="yes"
+                android:key="yes"
+                />
+            <CheckBoxPreference android:title="No"
+                android:key="no"
+                />
+
+        <EditTextPreference android:title="review"
+            android:key="review"
+            android:summary="type your review here.."/>
+
+        <SwitchPreference android:title="receive your feedback as mail" android:key="mail"/>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
